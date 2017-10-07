@@ -193,6 +193,7 @@
 				TargetAttributes = {
 					CD86592A1F88B1A200CAE33C = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = DV2995Y7AH;
 						ProvisioningStyle = Automatic;
 					};
 					CD86593E1F88B1A200CAE33C = {
@@ -410,6 +411,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DV2995Y7AH;
 				INFOPLIST_FILE = ResuMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HAP.ResuMe;
@@ -422,6 +424,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = DV2995Y7AH;
 				INFOPLIST_FILE = ResuMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = HAP.ResuMe;
