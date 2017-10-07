@@ -14,13 +14,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
 
-    @IBAction func loginButton(_ sender: UIButton) {
-        if emailTextField.text == "pat" && passwordTextField.text=="pass"{
-           self.performSegue(withIdentifier: "LoginSegue", sender: self)
+    @IBAction func Login(_ sender: UIButton) {
+        print("received")
+        if emailTextField.text == "r" {
+            self.performSegue(withIdentifier: "RecruiterSegue", sender: self)
+        }else if emailTextField.text == "s" {
+            self.performSegue(withIdentifier: "StudentSegue", sender: self)
         }
-        
-
     }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
