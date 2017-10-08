@@ -61,6 +61,7 @@ PODS:
   - GTMSessionFetcher/Core (1.1.12)
   - GTMSessionFetcher/Full (1.1.12):
     - GTMSessionFetcher/Core (= 1.1.12)
+  - PDFReader (2.4.0)
   - SwiftyDropbox (4.1.2):
     - Alamofire (~> 4.4.0)
   - SwiftyDropDataListing (0.0.1):
@@ -70,6 +71,7 @@ DEPENDENCIES:
   - FontAwesomeKit (~> 2.0)
   - Google/SignIn
   - GoogleAPIClientForREST/Drive (~> 1.2.1)
+  - PDFReader
   - SwiftyDropbox
   - SwiftyDropDataListing
 
@@ -85,9 +87,10 @@ SPEC CHECKSUMS:
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
   GTMOAuth2: be83fd28d63ae3087e7d351b1f39c1a7e24ab6e7
   GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
+  PDFReader: 0bb6be11c8876c6cea2598f0a0ab9b6640a8a018
   SwiftyDropbox: eb79d166c2850e50eed01c280c7c64b4b69c50a5
   SwiftyDropDataListing: 80862306e4e65f9cf3f10f5570ecc8377f9f655f
 
-PODFILE CHECKSUM: d986c74cfd9df6ddc479080f417fb9c17a76729e
+PODFILE CHECKSUM: 873491c0c244c5576ed844a4448c3dc28fce1767
 
 COCOAPODS: 1.3.1

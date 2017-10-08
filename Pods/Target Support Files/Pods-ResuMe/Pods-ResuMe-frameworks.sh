@@ -108,6 +108,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PDFReader/PDFReader.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyDropDataListing/SwiftyDropDataListing.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyDropbox/SwiftyDropbox.framework"
 fi
@@ -118,6 +119,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/PDFReader/PDFReader.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyDropDataListing/SwiftyDropDataListing.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SwiftyDropbox/SwiftyDropbox.framework"
 fi

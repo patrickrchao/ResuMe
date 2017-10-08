@@ -11,7 +11,8 @@ target 'ResuMe' do
   pod 'SwiftyDropbox'
   pod 'SwiftyDropDataListing'
   pod 'FontAwesomeKit', '~> 2.0'
-  target 'ResuMeTests' do
+  pod 'PDFReader'
+ target 'ResuMeTests' do
     inherit! :search_paths
     # Pods for testing
   end

@@ -7,7 +7,7 @@
 
 import UIKit
 import WebKit
-
+import PDFReader
 class ResumeViewController: UIViewController, WKNavigationDelegate {
     
     var webView: WKWebView!
@@ -21,9 +21,11 @@ class ResumeViewController: UIViewController, WKNavigationDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        let url = URL(string: "https://www.dropbox.com/s/33n2ycp1gt0u0pc/hw2.pdf")!
-        webView.load(URLRequest(url: url))
-        webView.allowsBackForwardNavigationGestures = true
+        let remotePDFDocumentURLPath = "https://www.dropbox.com/s/xyjveh14e57807q/Patrick%20Chao%20Resume.pdf?dl=1"
+        let remotePDFDocumentURL = URL(string: remotePDFDocumentURLPath)!
+        let document = PDFDocument(url: remotePDFDocumentURL)!
+        let readerController = PDFViewController.createNew(with: document)
+        navigationController?.pushViewController(readerController, animated: true)
     }
     
     override func didReceiveMemoryWarning() {

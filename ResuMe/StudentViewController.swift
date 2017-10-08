@@ -64,7 +64,7 @@ class StudentViewController: UIViewController, UITextFieldDelegate,GIDSignInUIDe
       
         GIDSignIn.sharedInstance().uiDelegate = self
         
-        let myString = "http://www.eaze.com"
+        let myString = "https://www.dropbox.com/s/xyjveh14e57807q/Patrick%20Chao%20Resume.pdf?dl=1"
         
         let data = myString.data(using: .ascii, allowLossyConversion:  false)
         let filter = CIFilter(name: "CIQRCodeGenerator")

@@ -12,6 +12,7 @@
 		C6FABBFF1EFC8DBC233B5B3C /* Pods_ResuMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0226352ADCF4349C21FF89F1 /* Pods_ResuMeTests.framework */; };
 		CD0034431F8A07D600F73B55 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0034421F8A07D500F73B55 /* QuartzCore.framework */; };
 		CD0034451F8A07DF00F73B55 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0034441F8A07DF00F73B55 /* Security.framework */; };
+		CD1C2A9C1F8A6DF20098AE61 /* ResumeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1C2A9B1F8A6DF20098AE61 /* ResumeViewController.swift */; };
 		CD840DC31F8935B200408825 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD840DC21F8935B200408825 /* QRViewController.swift */; };
 		CD840DC51F893EFC00408825 /* RecruiterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD840DC41F893EFC00408825 /* RecruiterViewController.swift */; };
 		CD86592F1F88B1A200CAE33C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD86592E1F88B1A200CAE33C /* AppDelegate.swift */; };
@@ -61,6 +62,7 @@
 		CD0034411F89E41700F73B55 /* ResuMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ResuMe.entitlements; sourceTree = "<group>"; };
 		CD0034421F8A07D500F73B55 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CD0034441F8A07DF00F73B55 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		CD1C2A9B1F8A6DF20098AE61 /* ResumeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResumeViewController.swift; sourceTree = "<group>"; };
 		CD840DC21F8935B200408825 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		CD840DC41F893EFC00408825 /* RecruiterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruiterViewController.swift; sourceTree = "<group>"; };
 		CD86592B1F88B1A200CAE33C /* ResuMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResuMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +169,7 @@
 		CD86592D1F88B1A200CAE33C /* ResuMe */ = {
 			isa = PBXGroup;
 			children = (
+				CD1C2A9B1F8A6DF20098AE61 /* ResumeViewController.swift */,
 				CD9AFDFA1F8A477900E4BFEA /* Student.swift */,
 				CD9AFDFB1F8A477900E4BFEA /* StudentTableViewCell.swift */,
 				CD9AFDF91F8A477900E4BFEA /* StudentTableViewController.swift */,
@@ -451,6 +454,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/PDFReader/PDFReader.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyDropDataListing/SwiftyDropDataListing.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyDropbox/SwiftyDropbox.framework",
 			);
@@ -462,6 +466,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PDFReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyDropDataListing.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyDropbox.framework",
 			);
@@ -534,6 +539,7 @@
 				CD840DC51F893EFC00408825 /* RecruiterViewController.swift in Sources */,
 				CD840DC31F8935B200408825 /* QRViewController.swift in Sources */,
 				CD86592F1F88B1A200CAE33C /* AppDelegate.swift in Sources */,
+				CD1C2A9C1F8A6DF20098AE61 /* ResumeViewController.swift in Sources */,
 				CD9AFDFE1F8A477900E4BFEA /* StudentTableViewCell.swift in Sources */,
 				CD9AFDFC1F8A477900E4BFEA /* StudentTableViewController.swift in Sources */,
 			);

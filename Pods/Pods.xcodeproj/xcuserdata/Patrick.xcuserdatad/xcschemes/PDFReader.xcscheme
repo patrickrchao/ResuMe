@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '164AA08460530BA9AD3BCF422BA07B03'
-               BlueprintName = 'SwiftyDropDataListing'
+               BlueprintIdentifier = 'F710BBECB76266FF75359E63DE720D2D'
+               BlueprintName = 'PDFReader'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'SwiftyDropDataListing.framework'>
+               BuildableName = 'PDFReader.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
