@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SwiftyDropbox
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate , GIDSignInDelegate{
@@ -47,8 +49,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate , GIDSignInDelegate{
         GGLContext.sharedInstance().configureWithError(&configureError)
         assert(configureError == nil, "Error configuring Google services: \(configureError)")
         GIDSignIn.sharedInstance().delegate = self
+        DropboxClientsManager.setupWithAppKey("0zng2b0v1z4cyfu")
         return true
     }
+
     
 //    func application(_ application: UIApplication,
 //                     open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
@@ -108,6 +112,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate , GIDSignInDelegate{
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         
+    }
+    
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        if let authResult = DropboxClientsManager.handleRedirectURL(url) {
+            switch authResult {
+            case .success:
+                print("Success! User is logged into Dropbox.")
+            case .cancel:
+                print("Authorization flow was manually canceled by user!")
+            case .error(_, let description):
+                print("Error: \(description)")
+            }
+        }
+        return true
     }
 
 }

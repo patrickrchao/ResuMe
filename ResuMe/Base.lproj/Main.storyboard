@@ -26,6 +26,9 @@
                                 <rect key="frame" x="26" y="114" width="268" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Upload Resume"/>
+                                <connections>
+                                    <action selector="UploadResume:" destination="Ng3-8o-KZ6" eventType="touchUpInside" id="Qbl-Qi-1WC"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="o3N-Gr-jsk">
                                 <rect key="frame" x="40" y="218" width="250" height="250"/>

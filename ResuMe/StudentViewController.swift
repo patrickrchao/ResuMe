@@ -7,10 +7,18 @@
 //
 
 import UIKit
-
+import SwiftyDropbox
 class StudentViewController: UIViewController, UITextFieldDelegate,GIDSignInUIDelegate {
 
-
+    @IBAction func UploadResume(_ sender: UIButton) {
+        
+        DropboxClientsManager.authorizeFromController(UIApplication.shared,
+                                                      controller: self,
+                                                      openURL: { (url: URL) -> Void in
+                                                        UIApplication.shared.openURL(url)
+        })
+    }
+    
     
     @IBOutlet weak var QRImage: UIImageView!
     

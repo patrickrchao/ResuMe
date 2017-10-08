@@ -51,6 +51,7 @@
 		BC0900521F88E10D009155B5 /* CreateStudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateStudentViewController.swift; sourceTree = "<group>"; };
 		BC3DFED7F0B6503BBC87840E /* Pods-ResuMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResuMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-ResuMe/Pods-ResuMe.release.xcconfig"; sourceTree = "<group>"; };
 		BEAFE2C87B918E091C7C53EE /* Pods-ResuMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResuMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ResuMe/Pods-ResuMe.debug.xcconfig"; sourceTree = "<group>"; };
+		CD0034411F89E41700F73B55 /* ResuMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ResuMe.entitlements; sourceTree = "<group>"; };
 		CD840DC21F8935B200408825 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		CD840DC41F893EFC00408825 /* RecruiterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruiterViewController.swift; sourceTree = "<group>"; };
 		CD86592B1F88B1A200CAE33C /* ResuMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResuMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -148,6 +149,7 @@
 		CD86592D1F88B1A200CAE33C /* ResuMe */ = {
 			isa = PBXGroup;
 			children = (
+				CD0034411F89E41700F73B55 /* ResuMe.entitlements */,
 				CDB233861F896F4D00A041C3 /* GoogleService-Info.plist */,
 				BC0900521F88E10D009155B5 /* CreateStudentViewController.swift */,
 				CD86592E1F88B1A200CAE33C /* AppDelegate.swift */,
@@ -262,6 +264,11 @@
 						DevelopmentTeam = DV2995Y7AH;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					CD86593E1F88B1A200CAE33C = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -415,17 +422,21 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ResuMe/Pods-ResuMe-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyDropbox/SwiftyDropbox.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyDropbox.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -644,6 +655,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ResuMe/ResuMe.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DV2995Y7AH;
@@ -664,6 +676,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ResuMe/ResuMe.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DV2995Y7AH;
