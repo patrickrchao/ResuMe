@@ -10,6 +10,8 @@
 		6B6B0FD37FA07C86671A55C0 /* Pods_ResuMe.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5122A1A26842E04CA48C21A6 /* Pods_ResuMe.framework */; };
 		BC0900531F88E10D009155B5 /* CreateStudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC0900521F88E10D009155B5 /* CreateStudentViewController.swift */; };
 		C6FABBFF1EFC8DBC233B5B3C /* Pods_ResuMeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0226352ADCF4349C21FF89F1 /* Pods_ResuMeTests.framework */; };
+		CD0034431F8A07D600F73B55 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0034421F8A07D500F73B55 /* QuartzCore.framework */; };
+		CD0034451F8A07DF00F73B55 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD0034441F8A07DF00F73B55 /* Security.framework */; };
 		CD840DC31F8935B200408825 /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD840DC21F8935B200408825 /* QRViewController.swift */; };
 		CD840DC51F893EFC00408825 /* RecruiterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD840DC41F893EFC00408825 /* RecruiterViewController.swift */; };
 		CD86592F1F88B1A200CAE33C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD86592E1F88B1A200CAE33C /* AppDelegate.swift */; };
@@ -19,6 +21,11 @@
 		CD8659391F88B1A200CAE33C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD8659371F88B1A200CAE33C /* LaunchScreen.storyboard */; };
 		CD8659441F88B1A200CAE33C /* ResuMeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8659431F88B1A200CAE33C /* ResuMeTests.swift */; };
 		CD86594F1F88B1A200CAE33C /* ResuMeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD86594E1F88B1A200CAE33C /* ResuMeUITests.swift */; };
+		CD9AFDF41F8A35BA00E4BFEA /* DBListingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AFDF31F8A35BA00E4BFEA /* DBListingViewController.swift */; };
+		CD9AFDF61F8A39F400E4BFEA /* FileViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AFDF51F8A39F400E4BFEA /* FileViewerViewController.swift */; };
+		CD9AFDFC1F8A477900E4BFEA /* StudentTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AFDF91F8A477900E4BFEA /* StudentTableViewController.swift */; };
+		CD9AFDFD1F8A477900E4BFEA /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AFDFA1F8A477900E4BFEA /* Student.swift */; };
+		CD9AFDFE1F8A477900E4BFEA /* StudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD9AFDFB1F8A477900E4BFEA /* StudentTableViewCell.swift */; };
 		CDAA30D11F8947E900A9AF3C /* StudentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAA30D01F8947E900A9AF3C /* StudentViewController.swift */; };
 		CDD63B4C1F89896C0014F850 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CDB233861F896F4D00A041C3 /* GoogleService-Info.plist */; };
 		E7536589EB33088D1AD6D3A3 /* Pods_ResuMeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55C6968A3BD9C11B3795138B /* Pods_ResuMeUITests.framework */; };
@@ -52,6 +59,8 @@
 		BC3DFED7F0B6503BBC87840E /* Pods-ResuMe.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResuMe.release.xcconfig"; path = "Pods/Target Support Files/Pods-ResuMe/Pods-ResuMe.release.xcconfig"; sourceTree = "<group>"; };
 		BEAFE2C87B918E091C7C53EE /* Pods-ResuMe.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResuMe.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ResuMe/Pods-ResuMe.debug.xcconfig"; sourceTree = "<group>"; };
 		CD0034411F89E41700F73B55 /* ResuMe.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ResuMe.entitlements; sourceTree = "<group>"; };
+		CD0034421F8A07D500F73B55 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CD0034441F8A07DF00F73B55 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		CD840DC21F8935B200408825 /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
 		CD840DC41F893EFC00408825 /* RecruiterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecruiterViewController.swift; sourceTree = "<group>"; };
 		CD86592B1F88B1A200CAE33C /* ResuMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResuMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +76,11 @@
 		CD86594A1F88B1A200CAE33C /* ResuMeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ResuMeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD86594E1F88B1A200CAE33C /* ResuMeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResuMeUITests.swift; sourceTree = "<group>"; };
 		CD8659501F88B1A200CAE33C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD9AFDF31F8A35BA00E4BFEA /* DBListingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBListingViewController.swift; sourceTree = "<group>"; };
+		CD9AFDF51F8A39F400E4BFEA /* FileViewerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileViewerViewController.swift; sourceTree = "<group>"; };
+		CD9AFDF91F8A477900E4BFEA /* StudentTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewController.swift; sourceTree = "<group>"; };
+		CD9AFDFA1F8A477900E4BFEA /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		CD9AFDFB1F8A477900E4BFEA /* StudentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewCell.swift; sourceTree = "<group>"; };
 		CDAA30D01F8947E900A9AF3C /* StudentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentViewController.swift; sourceTree = "<group>"; };
 		CDB233861F896F4D00A041C3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CDB233871F89723300A041C3 /* ResuMe-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ResuMe-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -78,6 +92,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD0034451F8A07DF00F73B55 /* Security.framework in Frameworks */,
+				CD0034431F8A07D600F73B55 /* QuartzCore.framework in Frameworks */,
 				6B6B0FD37FA07C86671A55C0 /* Pods_ResuMe.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -117,6 +133,8 @@
 		C5ACE8CC6EA9BF76C67A608B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CD0034441F8A07DF00F73B55 /* Security.framework */,
+				CD0034421F8A07D500F73B55 /* QuartzCore.framework */,
 				5122A1A26842E04CA48C21A6 /* Pods_ResuMe.framework */,
 				0226352ADCF4349C21FF89F1 /* Pods_ResuMeTests.framework */,
 				55C6968A3BD9C11B3795138B /* Pods_ResuMeUITests.framework */,
@@ -149,6 +167,10 @@
 		CD86592D1F88B1A200CAE33C /* ResuMe */ = {
 			isa = PBXGroup;
 			children = (
+				CD9AFDFA1F8A477900E4BFEA /* Student.swift */,
+				CD9AFDFB1F8A477900E4BFEA /* StudentTableViewCell.swift */,
+				CD9AFDF91F8A477900E4BFEA /* StudentTableViewController.swift */,
+				CD9AFDF51F8A39F400E4BFEA /* FileViewerViewController.swift */,
 				CD0034411F89E41700F73B55 /* ResuMe.entitlements */,
 				CDB233861F896F4D00A041C3 /* GoogleService-Info.plist */,
 				BC0900521F88E10D009155B5 /* CreateStudentViewController.swift */,
@@ -162,6 +184,7 @@
 				CD8659371F88B1A200CAE33C /* LaunchScreen.storyboard */,
 				CD86593A1F88B1A200CAE33C /* Info.plist */,
 				CDB233871F89723300A041C3 /* ResuMe-Bridging-Header.h */,
+				CD9AFDF31F8A35BA00E4BFEA /* DBListingViewController.swift */,
 			);
 			path = ResuMe;
 			sourceTree = "<group>";
@@ -423,19 +446,23 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ResuMe/Pods-ResuMe-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FontAwesomeKit/FontAwesomeKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleAPIClientForREST/GoogleAPIClientForREST.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyDropDataListing/SwiftyDropDataListing.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyDropbox/SwiftyDropbox.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesomeKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleAPIClientForREST.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyDropDataListing.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyDropbox.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -500,10 +527,15 @@
 			files = (
 				CDAA30D11F8947E900A9AF3C /* StudentViewController.swift in Sources */,
 				CD8659311F88B1A200CAE33C /* ViewController.swift in Sources */,
+				CD9AFDF61F8A39F400E4BFEA /* FileViewerViewController.swift in Sources */,
+				CD9AFDFD1F8A477900E4BFEA /* Student.swift in Sources */,
 				BC0900531F88E10D009155B5 /* CreateStudentViewController.swift in Sources */,
+				CD9AFDF41F8A35BA00E4BFEA /* DBListingViewController.swift in Sources */,
 				CD840DC51F893EFC00408825 /* RecruiterViewController.swift in Sources */,
 				CD840DC31F8935B200408825 /* QRViewController.swift in Sources */,
 				CD86592F1F88B1A200CAE33C /* AppDelegate.swift in Sources */,
+				CD9AFDFE1F8A477900E4BFEA /* StudentTableViewCell.swift in Sources */,
+				CD9AFDFC1F8A477900E4BFEA /* StudentTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

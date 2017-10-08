@@ -18,7 +18,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         print("received")
         if emailTextField.text == "r" {
             self.performSegue(withIdentifier: "RecruiterSegue", sender: self)
-        }else if emailTextField.text == "s" {
+        }else {//if emailTextField.text == "s" {
             self.performSegue(withIdentifier: "StudentSegue", sender: self)
         }
     }

@@ -9,6 +9,8 @@ target 'ResuMe' do
   pod 'GoogleAPIClientForREST/Drive', '~> 1.2.1'
   pod 'Google/SignIn'
   pod 'SwiftyDropbox'
+  pod 'SwiftyDropDataListing'
+  pod 'FontAwesomeKit', '~> 2.0'
   target 'ResuMeTests' do
     inherit! :search_paths
     # Pods for testing

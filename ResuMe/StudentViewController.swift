@@ -8,24 +8,60 @@
 
 import UIKit
 import SwiftyDropbox
-class StudentViewController: UIViewController, UITextFieldDelegate,GIDSignInUIDelegate {
+
+class StudentViewController: UIViewController, UITextFieldDelegate,GIDSignInUIDelegate ,SelectedDropboxData{
+    
+    
+   
 
     @IBAction func UploadResume(_ sender: UIButton) {
         
-        DropboxClientsManager.authorizeFromController(UIApplication.shared,
-                                                      controller: self,
-                                                      openURL: { (url: URL) -> Void in
-                                                        UIApplication.shared.openURL(url)
-        })
+        if (DropboxClientsManager.authorizedClient == nil) {
+            //authorize a user
+            DropboxClientsManager.authorizeFromController(UIApplication.shared,
+                                                          controller: self,
+                                                          openURL: { (url: URL) -> Void in
+                                                            UIApplication.shared.openURL(url)
+            })
+        }else{
+            print("User is already authorized!")
+            self.refreshDropboxList()
+        }
+   
     }
     
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "TableViewController"{
+            let tableViewController = segue.destination  as! DBListingViewController
+            tableViewController.delegate = self
+            tableViewController.showDropboxData()
+        }
+    }
+    
+    func getDropboxSelectedData(_ dataArr: [String]){
+        print(dataArr)
+        
+    }
+    func refreshDropboxList() {
+        self.performSegue(withIdentifier: "TableViewController", sender: nil)
+    }
+
+
+
+
+
+
     @IBOutlet weak var QRImage: UIImageView!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        NotificationCenter.default.addObserver(self, selector: #selector(self.refreshDropboxList), name: NSNotification.Name(rawValue: "Dropboxlistrefresh"), object: nil)
         
+        NotificationCenter.default.addObserver(self, selector: "handleDidLinkNotification:", name: NSNotification.Name(rawValue: "didLinkToDropboxAccountNotification"), object: nil)
+      
         GIDSignIn.sharedInstance().uiDelegate = self
         
         let myString = "http://www.eaze.com"
@@ -44,6 +80,15 @@ class StudentViewController: UIViewController, UITextFieldDelegate,GIDSignInUIDe
         // Do any additional setup after loading the view, typically from a nib.
         
     }
+    
+    
+    
+    
+    func handleDidLinkNotification(notification: NSNotification) {
+       
+    }
+    
+    
     
     @IBAction func didTapSignOut(sender: AnyObject) {
         GIDSignIn.sharedInstance().signOut()

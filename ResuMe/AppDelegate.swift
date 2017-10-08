@@ -119,9 +119,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate , GIDSignInDelegate{
         if let authResult = DropboxClientsManager.handleRedirectURL(url) {
             switch authResult {
             case .success:
+                NotificationCenter.default.post(name: Notification.Name(rawValue: "Dropboxlistrefresh"), object: nil)
                 print("Success! User is logged into Dropbox.")
             case .cancel:
                 print("Authorization flow was manually canceled by user!")
+                DropboxClientsManager.unlinkClients()
             case .error(_, let description):
                 print("Error: \(description)")
             }
@@ -129,5 +131,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate , GIDSignInDelegate{
         return true
     }
 
+    
+
+
+    func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+        
+        
+        
+        return false
+    }
 }
 

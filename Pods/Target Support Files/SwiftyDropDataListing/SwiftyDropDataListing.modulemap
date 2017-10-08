@@ -1,0 +1,6 @@
+framework module SwiftyDropDataListing {
+  umbrella header "SwiftyDropDataListing-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -65,7 +65,7 @@ open class DropboxTransportClient {
         }
     }
 
-    open func request<ASerial, RSerial, ESerial>(_ route: Route<ASerial, RSerial, ESerial>,
+    open func request<ASerial: JSONSerializer, RSerial: JSONSerializer, ESerial: JSONSerializer>(_ route: Route<ASerial, RSerial, ESerial>,
                         serverArgs: ASerial.ValueType? = nil) -> RpcRequest<RSerial, ESerial> {
         let host = route.attrs["host"]! ?? "api"
         let url = "\(self.baseHosts[host]!)/\(route.namespace)/\(route.name)"
@@ -79,7 +79,7 @@ open class DropboxTransportClient {
             rawJsonRequest = SerializeUtil.dumpJSON(jsonRequestObj)
         } else {
             let voidSerializer = route.argSerializer as! VoidSerializer
-            let jsonRequestObj = voidSerializer.serialize(())
+            let jsonRequestObj = voidSerializer.serialize()
             rawJsonRequest = SerializeUtil.dumpJSON(jsonRequestObj)
         }
 
@@ -90,9 +90,9 @@ open class DropboxTransportClient {
         let managerToUse = { () -> SessionManager in
             // longpoll requests have a much longer timeout period than other requests
             if type(of: route) ==  type(of: Files.listFolderLongpoll) {
-				return self.longpollManager
+                return longpollManager
             }
-			return self.manager
+            return manager
         }()
 
         let request = managerToUse.request(url, method: .post, parameters: ["jsonRequest": rawJsonRequest!], encoding: customEncoding, headers: headers)
@@ -118,7 +118,7 @@ open class DropboxTransportClient {
         }
     }
 
-    open func request<ASerial, RSerial, ESerial>(_ route: Route<ASerial, RSerial, ESerial>,
+    open func request<ASerial: JSONSerializer, RSerial: JSONSerializer, ESerial: JSONSerializer>(_ route: Route<ASerial, RSerial, ESerial>,
                         serverArgs: ASerial.ValueType, input: UploadBody) -> UploadRequest<RSerial, ESerial> {
         let host = route.attrs["host"]! ?? "api"
         let url = "\(self.baseHosts[host]!)/\(route.namespace)/\(route.name)"
@@ -145,7 +145,7 @@ open class DropboxTransportClient {
         return uploadRequestObj
     }
 
-    open func request<ASerial, RSerial, ESerial>(_ route: Route<ASerial, RSerial, ESerial>,
+    open func request<ASerial: JSONSerializer, RSerial: JSONSerializer, ESerial: JSONSerializer>(_ route: Route<ASerial, RSerial, ESerial>,
                         serverArgs: ASerial.ValueType, overwrite: Bool, destination: @escaping (URL, HTTPURLResponse) -> URL) -> DownloadRequestFile<RSerial, ESerial> {
         let host = route.attrs["host"]! ?? "api"
         let url = "\(self.baseHosts[host]!)/\(route.namespace)/\(route.name)"
@@ -195,7 +195,7 @@ open class DropboxTransportClient {
         return downloadRequestObj
     }
 
-    public func request<ASerial, RSerial, ESerial>(_ route: Route<ASerial, RSerial, ESerial>,
+    public func request<ASerial: JSONSerializer, RSerial: JSONSerializer, ESerial: JSONSerializer>(_ route: Route<ASerial, RSerial, ESerial>,
                         serverArgs: ASerial.ValueType) -> DownloadRequestMemory<RSerial, ESerial> {
         let host = route.attrs["host"]! ?? "api"
         let url = "\(self.baseHosts[host]!)/\(route.namespace)/\(route.name)"

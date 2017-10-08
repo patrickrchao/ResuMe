@@ -14,8 +14,11 @@ class RecruiterViewController: UIViewController, UITextFieldDelegate {
          self.performSegue(withIdentifier: "QRSegue",sender: self)
     }
 
-        
-        
+    @IBAction func ResumeTable(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "PastResumesSegue",sender: self)
+    }
+    
+
     override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view, typically from a nib.
