@@ -11,7 +11,7 @@ import UIKit
 class StudentTableViewController: UITableViewController {
     //MARK: Properties
     var students = [Student]()
-    
+    var names = ["Alex Chan", "Patrick Chao", "Hannah He", "Doe Moffit", "Michael Jordan"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,7 +42,7 @@ class StudentTableViewController: UITableViewController {
         }
         let student = students[indexPath.row]
 
-        cell.name?.text = student.firstname
+        cell.textLabel?.text = names[indexPath.row]
         return cell
     }
  
