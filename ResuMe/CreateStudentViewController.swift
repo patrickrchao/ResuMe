@@ -29,7 +29,7 @@ class CreateStudentViewController: UIViewController, UITextFieldDelegate {
         university.delegate = self
         
     }
-    
+
     //MARK: UITextFieldDelegate
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
@@ -51,11 +51,7 @@ class CreateStudentViewController: UIViewController, UITextFieldDelegate {
             var postData = URLRequest(url: datastoreURL)
             postData.httpMethod = "POST"
             print(postData)
-            let student: [String: Any] = [
-                //"key": "AIzaSyD2U7K6744gP8uUuqdyVLyPjfbpRZ2c6xc",
-                "mutations": ["firstname": firstname.text!, "lastname":lastname.text!, "email": email.text!, "password": password.text!, "School Year": year.text!, "University": university.text!],
-                "transaction": "string"
-            ]
+            let student: [String: Any] = ["firstname": firstname.text!, "lastname":lastname.text!, "email": email.text!, "password": password.text!, "School Year": year.text!, "University": university.text!]
             let jsonData : Data
             do {
                 jsonData = try JSONSerialization.data(withJSONObject: student, options:[])
@@ -67,20 +63,7 @@ class CreateStudentViewController: UIViewController, UITextFieldDelegate {
             print(jsonData)
             let session = URLSession.shared
             print(session)
-            let task = URLSession.shared.dataTask(with: postData) { data, response, error in
-                guard let data = data, error == nil else {                                                 // check for fundamental networking error
-                    print("error=\(String(describing: error))")
-                    return
-                }
-                
-                if let httpStatus = response as? HTTPURLResponse, httpStatus.statusCode != 200 {           // check for http errors
-                    print("statusCode should be 200, but is \(httpStatus.statusCode)")
-                    print("response = \(String(describing: response))")
-                }
-                
-                let responseString = String(data: data, encoding: .utf8)
-                print("responseString = \(String(describing: responseString))")
-            }
+            let task = session.dataTask(with: postData) {_, _, _ in}
             task.resume()
             
         }

@@ -34,6 +34,11 @@
                                     <constraint firstAttribute="height" constant="250" id="rm4-PX-XQq"/>
                                 </constraints>
                             </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7HP-Vm-TJE" customClass="GIDSignInButton">
+                                <rect key="frame" x="45" y="146" width="240" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -329,6 +334,7 @@
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="submit:" destination="Zei-Oo-q1S" eventType="touchUpInside" id="K9Q-1S-6lZ"/>
+                                    <segue destination="Ng3-8o-KZ6" kind="show" id="Clk-hD-ojk"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Epl-el-6eh">
@@ -424,4 +430,7 @@
             <point key="canvasLocation" x="24.800000000000001" y="-645.42728635682158"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Clk-hD-ojk"/>
+    </inferredMetricsTieBreakers>
 </document>

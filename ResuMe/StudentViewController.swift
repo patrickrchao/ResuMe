@@ -8,8 +8,8 @@
 
 import UIKit
 
-class StudentViewController: UIViewController, UITextFieldDelegate {
-    
+class StudentViewController: UIViewController, UITextFieldDelegate,GIDSignInUIDelegate {
+
 
     
     @IBOutlet weak var QRImage: UIImageView!
@@ -17,6 +17,9 @@ class StudentViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        GIDSignIn.sharedInstance().uiDelegate = self
+        
         let myString = "http://www.eaze.com"
         
         let data = myString.data(using: .ascii, allowLossyConversion:  false)
@@ -33,6 +36,11 @@ class StudentViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         
     }
+    
+    @IBAction func didTapSignOut(sender: AnyObject) {
+        GIDSignIn.sharedInstance().signOut()
+    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
