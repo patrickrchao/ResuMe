@@ -25,6 +25,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		19E755971F89EE6C008496AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19E755911F89EE6B008496AE /* TempResuMe.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 19E755601F89EE6B008496AE;
+			remoteInfo = TempResuMe;
+		};
+		19E755991F89EE6C008496AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19E755911F89EE6B008496AE /* TempResuMe.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 19E755741F89EE6B008496AE;
+			remoteInfo = TempResuMeTests;
+		};
+		19E7559B1F89EE6C008496AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19E755911F89EE6B008496AE /* TempResuMe.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 19E7557F1F89EE6B008496AE;
+			remoteInfo = TempResuMeUITests;
+		};
 		CD8659401F88B1A200CAE33C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CD8659231F88B1A200CAE33C /* Project object */;
@@ -43,6 +64,7 @@
 
 /* Begin PBXFileReference section */
 		0226352ADCF4349C21FF89F1 /* Pods_ResuMeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResuMeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19E755911F89EE6B008496AE /* TempResuMe.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TempResuMe.xcodeproj; path = TempResuMe/TempResuMe.xcodeproj; sourceTree = "<group>"; };
 		20D44944568223A655CE236D /* Pods-ResuMeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ResuMeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ResuMeTests/Pods-ResuMeTests.release.xcconfig"; sourceTree = "<group>"; };
 		5122A1A26842E04CA48C21A6 /* Pods_ResuMe.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResuMe.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C6968A3BD9C11B3795138B /* Pods_ResuMeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ResuMeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +122,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19E755921F89EE6B008496AE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19E755981F89EE6C008496AE /* TempResuMe.app */,
+				19E7559A1F89EE6C008496AE /* TempResuMeTests.xctest */,
+				19E7559C1F89EE6C008496AE /* TempResuMeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		8B45B51CEA6A55F96AC0ADFF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,6 +180,7 @@
 		CD86592D1F88B1A200CAE33C /* ResuMe */ = {
 			isa = PBXGroup;
 			children = (
+				19E755911F89EE6B008496AE /* TempResuMe.xcodeproj */,
 				CDB233861F896F4D00A041C3 /* GoogleService-Info.plist */,
 				BC0900521F88E10D009155B5 /* CreateStudentViewController.swift */,
 				CD86592E1F88B1A200CAE33C /* AppDelegate.swift */,
@@ -259,7 +292,7 @@
 				TargetAttributes = {
 					CD86592A1F88B1A200CAE33C = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = DV2995Y7AH;
+						DevelopmentTeam = J9G6V3W2W6;
 						LastSwiftMigration = 0900;
 						ProvisioningStyle = Automatic;
 					};
@@ -286,6 +319,12 @@
 			mainGroup = CD8659221F88B1A200CAE33C;
 			productRefGroup = CD86592C1F88B1A200CAE33C /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 19E755921F89EE6B008496AE /* Products */;
+					ProjectRef = 19E755911F89EE6B008496AE /* TempResuMe.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CD86592A1F88B1A200CAE33C /* ResuMe */,
@@ -294,6 +333,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		19E755981F89EE6C008496AE /* TempResuMe.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = TempResuMe.app;
+			remoteRef = 19E755971F89EE6C008496AE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19E7559A1F89EE6C008496AE /* TempResuMeTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TempResuMeTests.xctest;
+			remoteRef = 19E755991F89EE6C008496AE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19E7559C1F89EE6C008496AE /* TempResuMeUITests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = TempResuMeUITests.xctest;
+			remoteRef = 19E7559B1F89EE6C008496AE /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CD8659291F88B1A200CAE33C /* Resources */ = {
@@ -646,10 +709,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DV2995Y7AH;
+				DEVELOPMENT_TEAM = J9G6V3W2W6;
 				INFOPLIST_FILE = ResuMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = HAP.ResuMe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HAP.ResuMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ResuMe/ResuMe-Bridging-Header.h";
@@ -666,10 +729,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DV2995Y7AH;
+				DEVELOPMENT_TEAM = J9G6V3W2W6;
 				INFOPLIST_FILE = ResuMe/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = HAP.ResuMe;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HAP.ResuMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "ResuMe/ResuMe-Bridging-Header.h";
